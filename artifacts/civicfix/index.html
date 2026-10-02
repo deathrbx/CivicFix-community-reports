@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101615">
-  <meta name="description" content="See it. Report it. Improve your community. CivicFix helps neighbors make local issues visible and actionable.">
+  <meta name="description" content="CivicFix is an information-only preview of a clearer, more practical approach to local civic issues.">
   <meta property="og:title" content="CivicFix — Make your block better">
-  <meta property="og:description" content="A clearer way to report civic issues and follow local progress.">
+  <meta property="og:description" content="A clearer, more practical approach to local civic issues.">
   <title>CivicFix — Make your block better</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,45 +20,35 @@
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="4" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="4" y="14" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="14" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
-    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.4a7.4 7.4 0 0 1-7.8 7.4 8 8 0 0 1-3.3-.7L4 20l1.5-4.1a7.1 7.1 0 0 1-1.2-4.1A7.4 7.4 0 0 1 12 4.4a7.7 7.7 0 0 1 8 7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.5 11.9h.01m3.5 0h.01m3.5 0h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-2.8L12 2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m19 2 .7 2.3L22 5l-2.3.7L19 8l-.7-2.3L16 5l2.3-.7L19 2Z" fill="currentColor"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   </svg>
 
-  <main id="landingView">
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="CivicFix home">
-        <span class="brand-mark"><svg><use href="#i-mark"/></svg></span>
-        <span class="brand-name">civic<span>fix</span></span>
-      </a>
-      <nav class="landing-nav" aria-label="Main navigation">
-        <a href="#how-it-works">How it works</a>
-        <a href="#community">Community</a>
-      </nav>
-      <div class="header-actions">
-        <button class="button button-quiet" type="button" data-action="open-auth">Log in</button>
-        <button class="button button-primary button-small" type="button" data-action="open-auth">Get started <svg class="icon"><use href="#i-arrow"/></svg></button>
-      </div>
-    </header>
-    <div id="configNotice" class="config-notice" role="status" hidden>
-      Connect a Supabase project to enable accounts and live community reports. Setup steps are in README.md.
-    </div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="CivicFix home">
+      <span class="brand-mark"><svg><use href="#i-mark"/></svg></span>
+      <span class="brand-name">civic<span>fix</span></span>
+    </a>
+    <nav class="landing-nav" aria-label="Main navigation">
+      <a href="#how-it-works">The approach</a>
+      <a href="#community">Principles</a>
+    </nav>
+    <a class="button button-primary button-small header-cta" href="#how-it-works">Explore the approach <svg class="icon"><use href="#i-arrow"/></svg></a>
+  </header>
 
-    <section class="hero" id="top" aria-labelledby="hero-title">
+  <main id="top">
+    <p class="preview-notice" role="status">Information-only preview. Accounts, live reports, and AI assistance are not enabled.</p>
+
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEIGHBORHOOD, IN THE LOOP</p>
-        <h1 id="hero-title">See it.<br><span class="title-accent">Report it.</span><br>Make it better.</h1>
-        <p class="hero-description">A broken streetlight shouldn’t be a mystery. CivicFix gives neighbors one clear place to report local issues and follow what happens next.</p>
+        <h1 id="hero-title">See it.<br><span class="title-accent">Look closer.</span><br>Make it better.</h1>
+        <p class="hero-description">CivicFix is a preview of a clearer way to think about local issues: what you noticed, where it is, and what might help.</p>
         <div class="hero-actions">
-          <button class="button button-primary button-large" id="startReport" type="button" data-action="start-report">Report an issue <svg class="icon"><use href="#i-arrow"/></svg></button>
-          <button class="button button-outline button-large" id="exploreCommunity" type="button" data-action="explore-community">Explore the community</button>
+          <a class="button button-primary button-large" href="#how-it-works">See the approach <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="button button-outline button-large" href="#community">Our principles</a>
         </div>
-        <div class="hero-note"><span class="note-rule"></span><span>Small reports. Real-world follow-through.</span></div>
+        <div class="hero-note"><span class="note-rule"></span><span>Start with clear observations and useful context.</span></div>
       </div>
-      <div class="hero-art" aria-label="Illustration of a connected neighborhood">
+      <div class="hero-art" role="img" aria-label="Abstract illustration of connected neighborhood streets">
         <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
         <div class="map-grid"></div>
         <div class="map-route route-a"></div><div class="map-route route-b"></div><div class="map-route route-c"></div>
@@ -67,209 +57,92 @@
         <div class="map-pin pin-main"><svg><use href="#i-pin"/></svg><span class="pin-ripple"></span></div>
         <div class="map-pin pin-small pin-one"><svg><use href="#i-pin"/></svg></div>
         <div class="map-pin pin-small pin-two"><svg><use href="#i-pin"/></svg></div>
-        <div class="map-label label-top"><span class="label-dash"></span> LOCAL SIGNAL</div>
-        <div class="map-label label-bottom"><span class="status-live"></span> A clearer picture, block by block</div>
+        <div class="map-label label-top"><span class="label-dash"></span> LOCAL PERSPECTIVE</div>
+        <div class="map-label label-bottom"><span class="status-dot"></span> A clearer picture, block by block</div>
         <div class="map-coordinate">LOCAL AREA<br>LOCATION NOT SET</div>
-        <div class="art-side-note">COMMUNITY<br>INFRASTRUCTURE<br>01 / 04</div>
+        <div class="art-side-note">COMMUNITY<br>INFRASTRUCTURE<br>01 / 03</div>
       </div>
-      <div class="hero-foot"><span>BUILT FOR THE PLACES WE SHARE</span><span class="hero-foot-line"></span><span>01 — NOTICE</span></div>
+      <div class="hero-foot"><span>BUILT AROUND THE PLACES WE SHARE</span><span class="hero-foot-line"></span><span>01 — NOTICE</span></div>
     </section>
 
     <section class="signal-strip" aria-label="CivicFix principles">
-      <p>BETTER LOCAL KNOW-HOW, WITHOUT THE RUNAROUND</p>
-      <div><span class="strip-mark">01</span> Make an issue visible</div>
-      <div><span class="strip-mark">02</span> Keep track of progress</div>
-      <div><span class="strip-mark">03</span> Share what you learn</div>
+      <p>A PRACTICAL APPROACH TO LOCAL ISSUES</p>
+      <div><span class="strip-mark">01</span> Describe what you noticed</div>
+      <div><span class="strip-mark">02</span> Add useful context</div>
+      <div><span class="strip-mark">03</span> Consider a next step</div>
     </section>
 
-    <section class="how-section" id="how-it-works">
-      <div class="section-kicker">A BETTER WAY TO FOLLOW THROUGH <span>— 02</span></div>
+    <section class="how-section" id="how-it-works" aria-labelledby="approach-title">
+      <div class="section-kicker">A CLEARER WAY TO THINK IT THROUGH <span>— 02</span></div>
       <div class="how-heading">
-        <h2>From “someone<br>should” to <em>here’s how.</em></h2>
-        <p>Good civic reporting is practical. Start with what you noticed; CivicFix helps make the next step easier to see.</p>
+        <h2 id="approach-title">From “someone<br>should” to <em>where to start.</em></h2>
+        <p>Useful civic information starts with an observation. A little context can make it easier to understand what is happening and what could help.</p>
       </div>
       <div class="steps-grid">
         <article class="step-card">
           <span class="step-number">01 / NOTICE</span>
           <div class="step-icon step-icon-pin"><svg><use href="#i-pin"/></svg></div>
-          <h3>Spot something?</h3>
-          <p>Capture the issue, where it is, and what would help someone understand it.</p>
+          <h3>Start with what you saw.</h3>
+          <p>Describe the issue in plain, specific terms. Stick to details someone else could verify.</p>
           <span class="step-line"></span>
         </article>
         <article class="step-card step-featured">
-          <span class="step-number">02 / REPORT</span>
+          <span class="step-number">02 / ADD CONTEXT</span>
           <div class="step-icon step-icon-report"><svg><use href="#i-plus"/></svg></div>
-          <h3>Put it on the map.</h3>
-          <p>A useful report gives neighbors and local teams a shared place to start.</p>
+          <h3>Make the details useful.</h3>
+          <p>A nearby landmark, timing, or clear description can help explain why an issue matters.</p>
           <span class="step-line"></span>
         </article>
         <article class="step-card">
-          <span class="step-number">03 / FOLLOW</span>
+          <span class="step-number">03 / FOLLOW THROUGH</span>
           <div class="step-icon step-icon-follow"><svg><use href="#i-arrow"/></svg></div>
-          <h3>See what changes.</h3>
-          <p>Keep up with updates and learn what’s moving in the places you care about.</p>
+          <h3>Look for a next step.</h3>
+          <p>Local knowledge can point toward the right people, resources, or community conversation.</p>
           <span class="step-line"></span>
         </article>
       </div>
     </section>
 
-    <section class="community-section" id="community">
+    <section class="community-section" id="community" aria-labelledby="principles-title">
       <div class="community-copy">
         <div class="section-kicker">A SHARED VIEW OF THE BLOCK <span>— 03</span></div>
-        <h2>Better informed.<br><em>Better together.</em></h2>
-        <p>See what your community is reporting, follow progress, and add context where it helps. The feed starts with your neighbors—not noise.</p>
-        <button class="text-link" type="button" data-action="explore-community">Explore community reports <svg class="icon"><use href="#i-arrow"/></svg></button>
+        <h2 id="principles-title">Better informed.<br><em>Better together.</em></h2>
+        <p>CivicFix is built around practical, respectful local communication. These principles guide the concept—this preview does not collect or publish reports.</p>
       </div>
-      <div class="feed-preview" aria-label="Community feed empty-state preview">
-        <div class="preview-topline"><span>COMMUNITY FEED</span><span class="preview-window">LIVE VIEW <i></i></span></div>
-        <div class="preview-empty">
-          <div class="empty-graphic"><span class="empty-ring ring-1"></span><span class="empty-ring ring-2"></span><span class="empty-ring ring-3"></span><svg><use href="#i-mark"/></svg></div>
-          <h3>Your community feed starts here.</h3>
-          <p>When neighbors share reports, they’ll appear here for everyone to follow.</p>
-          <button class="button button-outline button-small" type="button" data-action="explore-community">Open community feed <svg class="icon"><use href="#i-arrow"/></svg></button>
-        </div>
-        <div class="preview-footer"><span>NO REPORTS SHOWN</span><span>JUST THE SIGNAL</span></div>
-      </div>
-    </section>
-
-    <section class="ai-section">
-      <div class="ai-orbit-art" aria-hidden="true"><span class="ai-orbit-line"></span><span class="ai-orbit-line orbit-inner"></span><span class="ai-core"><svg><use href="#i-spark"/></svg></span><span class="ai-node node-a"></span><span class="ai-node node-b"></span><span class="ai-node node-c"></span><span class="ai-coordinate">CIVICAI / 01</span></div>
-      <div class="ai-copy">
-        <div class="section-kicker">A LITTLE HELP, WHEN YOU NEED IT <span>— 04</span></div>
-        <h2>Not sure where<br>to start? <em>Ask.</em></h2>
-        <p>CivicAI offers practical guidance for writing a clear report, choosing a category, or figuring out what information to include. It’s a helper—not a substitute for local expertise.</p>
-        <button class="button button-outline button-large" type="button" data-action="open-civic-ai"><svg class="icon"><use href="#i-spark"/></svg> Ask CivicAI</button>
+      <div class="principles-card" aria-label="CivicFix communication principles">
+        <div class="principles-topline"><span>COMMUNITY PRINCIPLES</span><span>THE CIVICFIX APPROACH</span></div>
+        <article class="principle-row">
+          <span class="principle-index">01</span>
+          <div><h3>Be specific</h3><p>Share observable details rather than assumptions.</p></div>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </article>
+        <article class="principle-row">
+          <span class="principle-index">02</span>
+          <div><h3>Be considerate</h3><p>Focus on the issue and the people affected.</p></div>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </article>
+        <article class="principle-row">
+          <span class="principle-index">03</span>
+          <div><h3>Stay grounded</h3><p>Look for helpful next steps in local context.</p></div>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </article>
+        <div class="principles-foot"><span class="status-dot"></span> CLEAR INFORMATION STARTS LOCALLY</div>
       </div>
     </section>
 
     <section class="closing-cta">
-      <span class="closing-index">05 / YOUR NEXT STEP</span>
+      <span class="closing-index">CIVICFIX / A COMMUNITY CONCEPT</span>
       <h2>Know your block.<br><em>Help it work better.</em></h2>
       <p>Start with one thing you noticed today.</p>
-      <button class="button button-primary button-large" type="button" data-action="start-report">Make a report <svg class="icon"><use href="#i-arrow"/></svg></button>
+      <a class="button button-primary button-large" href="#how-it-works">Review the approach <svg class="icon"><use href="#i-arrow"/></svg></a>
       <div class="closing-decoration" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
     </section>
-
-    <footer class="site-footer">
-      <a class="brand" href="#top" aria-label="CivicFix home"><span class="brand-mark"><svg><use href="#i-mark"/></svg></span><span class="brand-name">civic<span>fix</span></span></a>
-      <p>See it. Report it. Improve your community.</p>
-      <span class="footer-note">A clearer view of the places we share.</span>
-    </footer>
   </main>
 
-  <div id="appView" hidden>
-    <div class="app-shell">
-      <aside class="app-sidebar">
-        <a class="brand" href="#" data-action="go-dashboard" aria-label="CivicFix dashboard"><span class="brand-mark"><svg><use href="#i-mark"/></svg></span><span class="brand-name">civic<span>fix</span></span></a>
-        <div class="sidebar-label">YOUR CIVIC DESK</div>
-        <nav id="primaryNav" class="primary-nav" aria-label="Application navigation">
-          <button type="button" class="nav-item is-active" data-page="dashboard"><svg><use href="#i-grid"/></svg><span>Overview</span><span class="nav-current"></span></button>
-          <button type="button" class="nav-item" data-page="community"><svg><use href="#i-list"/></svg><span>Community feed</span></button>
-          <button type="button" class="nav-item" data-page="mine"><svg><use href="#i-pin"/></svg><span>My reports</span></button>
-          <button type="button" class="nav-item" data-action="open-civic-ai"><svg><use href="#i-spark"/></svg><span>CivicAI</span></button>
-          <button type="button" class="nav-item nav-report" data-page="report"><svg><use href="#i-plus"/></svg><span>New report</span></button>
-        </nav>
-        <div class="sidebar-bottom">
-          <div class="sidebar-help"><span class="help-icon"><svg><use href="#i-spark"/></svg></span><div><strong>Need a hand?</strong><span>CivicAI can help you start.</span></div><button type="button" aria-label="Open CivicAI" data-action="open-civic-ai"><svg><use href="#i-arrow"/></svg></button></div>
-          <div class="sidebar-user"><div class="user-avatar" aria-hidden="true">C</div><div class="user-details"><span id="userEmail">Your account</span><small>COMMUNITY MEMBER</small></div><button id="logoutButton" class="icon-button" type="button" aria-label="Log out" data-action="logout"><svg><use href="#i-arrow"/></svg></button></div>
-        </div>
-      </aside>
-      <div class="app-main">
-        <header class="app-topbar">
-          <button id="mobileNavToggle" class="icon-button mobile-nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav" data-action="toggle-nav"><svg><use href="#i-menu"/></svg></button>
-          <div class="breadcrumb"><span>CIVICFIX</span><span class="breadcrumb-slash">/</span><strong data-current-page>Overview</strong></div>
-          <div class="topbar-right"><span class="city-indicator"><i></i> COMMUNITY SPACE</span><button type="button" class="button button-primary button-small" data-page="report"><svg class="icon"><use href="#i-plus"/></svg> New report</button></div>
-        </header>
-        <div class="app-content">
-          <section id="dashboardPage" class="app-page" data-page-view="dashboard" aria-labelledby="dashboardHeading">
-            <div class="page-heading"><div><p class="eyebrow">YOUR CIVIC DESK <span class="heading-slash">/</span> OVERVIEW</p><h1 id="dashboardHeading">Make your neighborhood <em>visible.</em></h1><p class="page-intro">A place to keep an eye on what’s happening and what you’ve reported.</p></div><button type="button" class="button button-primary" data-page="report"><svg class="icon"><use href="#i-plus"/></svg> Report an issue</button></div>
-            <div class="dashboard-stats" aria-label="Community report statistics">
-              <article class="stat-card"><span class="stat-label">ALL REPORTS</span><strong data-stat="total">—</strong><span class="stat-caption">Shared in your community</span><span class="stat-mark">01</span></article>
-              <article class="stat-card"><span class="stat-label">OPEN</span><strong data-stat="open">—</strong><span class="stat-caption">Waiting for a next step</span><span class="stat-mark">02</span></article>
-              <article class="stat-card"><span class="stat-label">IN PROGRESS</span><strong data-stat="progress">—</strong><span class="stat-caption">Being worked on</span><span class="stat-mark">03</span></article>
-              <article class="stat-card"><span class="stat-label">RESOLVED</span><strong data-stat="resolved">—</strong><span class="stat-caption">Marked as addressed</span><span class="stat-mark">04</span></article>
-            </div>
-            <div class="dashboard-grid">
-              <section class="panel recent-panel">
-                <div class="panel-heading"><div><span class="panel-kicker">THE LATEST</span><h2>Recent reports</h2></div><button class="text-link text-link-small" type="button" data-page="community">View community <svg class="icon"><use href="#i-arrow"/></svg></button></div>
-                <div id="recentReports" class="report-list" aria-live="polite">
-                  <div class="empty-state"><span class="empty-state-symbol"><svg><use href="#i-pin"/></svg></span><h3>Nothing to show just yet.</h3><p>When reports are shared with the community, you’ll see them here.</p><button type="button" class="text-link" data-page="report">Create the first report <svg class="icon"><use href="#i-arrow"/></svg></button></div>
-                </div>
-              </section>
-              <aside class="impact-panel">
-                <div class="panel-kicker">COMMUNITY IMPACT</div><h2>Progress begins with being heard.</h2>
-                <p>Every clear report helps build a more useful picture of local needs.</p>
-                <div class="impact-metrics"><div><strong data-impact="contributors">—</strong><span>CONTRIBUTORS</span></div><div><strong data-impact="resolved">—</strong><span>RESOLVED</span></div></div>
-                <span class="impact-coordinate">CIVICFIX / LOCAL VIEW</span>
-              </aside>
-            </div>
-          </section>
-
-          <section id="communityPage" class="app-page" data-page-view="community" aria-labelledby="communityHeading" hidden>
-            <div class="page-heading"><div><p class="eyebrow">YOUR CIVIC DESK <span class="heading-slash">/</span> COMMUNITY</p><h1 id="communityHeading">The community <em>feed.</em></h1><p class="page-intro">A shared view of local reports. Follow what matters where you live.</p></div><button type="button" class="button button-primary" data-page="report"><svg class="icon"><use href="#i-plus"/></svg> Add a report</button></div>
-            <div class="feed-toolbar"><span><i class="status-live"></i> COMMUNITY REPORTS</span><label class="filter-label" for="communityFilter">Show <select id="communityFilter" name="communityFilter"><option value="all">All reports</option><option value="open">Open</option><option value="progress">In progress</option><option value="resolved">Resolved</option></select></label></div>
-            <div id="communityReports" class="community-report-list" aria-live="polite"><div class="empty-state empty-state-wide"><span class="empty-state-symbol"><svg><use href="#i-list"/></svg></span><h2>Your community feed starts here.</h2><p>There are no shared reports to show yet. Add a clear, useful report to help your community get started.</p><button class="button button-outline" type="button" data-page="report"><svg class="icon"><use href="#i-plus"/></svg> Create a report</button></div></div>
-          </section>
-
-          <section id="minePage" class="app-page" data-page-view="mine" aria-labelledby="mineHeading" hidden>
-            <div class="page-heading"><div><p class="eyebrow">YOUR CIVIC DESK <span class="heading-slash">/</span> MY REPORTS</p><h1 id="mineHeading">Your reports, <em>in view.</em></h1><p class="page-intro">Keep your own reports organized and follow their progress.</p></div><button type="button" class="button button-primary" data-page="report"><svg class="icon"><use href="#i-plus"/></svg> New report</button></div>
-            <div class="feed-toolbar"><span>YOUR SUBMISSIONS</span><span class="muted-note">Only you can manage your reports</span></div>
-            <div id="myReports" class="community-report-list" aria-live="polite"><div class="empty-state empty-state-wide"><span class="empty-state-symbol"><svg><use href="#i-pin"/></svg></span><h2>You haven’t reported anything yet.</h2><p>Start with one thing you noticed. You’ll be able to track it here.</p><button class="button button-primary" type="button" data-page="report"><svg class="icon"><use href="#i-plus"/></svg> Make your first report</button></div></div>
-          </section>
-
-          <section id="reportPage" class="app-page" data-page-view="report" aria-labelledby="reportHeading" hidden>
-            <div class="page-heading form-page-heading"><div><p class="eyebrow">YOUR CIVIC DESK <span class="heading-slash">/</span> NEW REPORT</p><h1 id="reportHeading">Put it <em>on the map.</em></h1><p class="page-intro">A few useful details help others understand what needs attention.</p></div><span class="form-index">REPORT / 01</span></div>
-            <form id="reportForm" class="report-form">
-              <div class="form-main">
-                <div class="form-section-label"><span>01</span><div><strong>What did you notice?</strong><small>Keep it specific and factual.</small></div></div>
-                <label class="field-label" for="reportTitle">Report title <span>REQUIRED</span></label>
-                <input id="reportTitle" name="title" type="text" minlength="5" maxlength="120" placeholder="Broken streetlight near community park" required>
-                <div class="field-row">
-                  <div class="field-group"><label class="field-label" for="reportCategory">Category <span>REQUIRED</span></label><select id="reportCategory" name="category" required><option value="" disabled selected>Select a category</option><option value="waste">Waste &amp; sanitation</option><option value="roads">Roads &amp; sidewalks</option><option value="streetlights">Streetlights</option><option value="water">Water &amp; drainage</option><option value="safety">Public safety</option><option value="facilities">Public facilities</option><option value="environment">Environment</option><option value="other">Other</option></select></div>
-                  <div class="field-group"><label class="field-label" for="reportPriority">Urgency <span>OPTIONAL</span></label><select id="reportPriority" name="priority"><option value="low">Low — when convenient</option><option value="medium" selected>Medium — needs attention</option><option value="high">High — time-sensitive</option></select></div>
-                </div>
-                <label class="field-label" for="reportDescription">What’s happening? <span>REQUIRED</span></label>
-                <textarea id="reportDescription" name="description" rows="5" minlength="10" maxlength="2000" placeholder="Describe what is happening and why it matters." required></textarea>
-                <label class="field-label" for="reportLocation">Where is it? <span>OPTIONAL</span></label>
-                <div class="location-input"><svg><use href="#i-pin"/></svg><input id="reportLocation" name="location" type="text" maxlength="180" placeholder="Nearby street, intersection, or landmark"></div>
-                <div class="form-actions"><button id="submitReport" class="button button-primary button-large" type="submit">Submit report <svg class="icon"><use href="#i-arrow"/></svg></button><p>Reports are shared with the community feed.</p></div>
-              </div>
-              <aside class="form-aside"><div class="aside-rule"></div><span class="panel-kicker">A USEFUL REPORT</span><h2>Clear details help move things forward.</h2><p>Describe what’s there, not who’s to blame. If it’s safe, include a nearby landmark someone else can recognize.</p><button type="button" class="ai-tip-link" data-action="open-civic-ai"><svg><use href="#i-spark"/></svg> Need help writing it? Ask CivicAI.</button><span class="aside-footnote">YOUR REPORT / YOUR COMMUNITY</span></aside>
-            </form>
-          </section>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <dialog id="authDialog" class="modal-dialog" aria-labelledby="authHeading">
-    <div class="dialog-card auth-card"><button class="dialog-close icon-button" type="button" aria-label="Close dialog" data-action="close-dialog"><svg><use href="#i-close"/></svg></button><a class="brand dialog-brand" href="#" aria-label="CivicFix"><span class="brand-mark"><svg><use href="#i-mark"/></svg></span><span class="brand-name">civic<span>fix</span></span></a><p class="eyebrow">YOUR CIVIC DESK</p><h2 id="authHeading">Good to have you <em>here.</em></h2><p id="authCopy" class="dialog-copy">Sign in to follow reports and add your voice to the community.</p><form id="authForm"><label class="field-label" for="authEmail">Email address</label><input id="authEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><label class="field-label" for="authPassword">Password</label><input id="authPassword" name="password" type="password" autocomplete="current-password" minlength="6" placeholder="At least 6 characters" required><p id="authMessage" class="form-message" aria-live="polite"></p><button id="authSubmit" class="button button-primary button-large auth-submit" type="submit">Log in <svg class="icon"><use href="#i-arrow"/></svg></button></form><p class="auth-switch"><span data-auth-switch-copy>New to CivicFix?</span> <button id="authModeToggle" type="button" data-action="toggle-auth-mode">Create an account</button></p><p class="auth-footnote">Your account helps keep your reports and updates together.</p></div>
-  </dialog>
-
-  <dialog id="editDialog" class="modal-dialog" aria-labelledby="editHeading">
-    <div class="dialog-card edit-card"><button class="dialog-close icon-button" type="button" aria-label="Close dialog" data-action="close-dialog"><svg><use href="#i-close"/></svg></button><p class="eyebrow">YOUR CIVIC DESK <span class="heading-slash">/</span> EDIT REPORT</p><h2 id="editHeading">Update your <em>report.</em></h2><form id="editForm"><label class="field-label" for="editTitle">Report title</label><input id="editTitle" name="title" type="text" minlength="5" maxlength="120" required><div class="field-row"><div class="field-group"><label class="field-label" for="editCategory">Category</label><select id="editCategory" name="category" required><option value="waste">Waste &amp; sanitation</option><option value="roads">Roads &amp; sidewalks</option><option value="streetlights">Streetlights</option><option value="water">Water &amp; drainage</option><option value="safety">Public safety</option><option value="facilities">Public facilities</option><option value="environment">Environment</option><option value="other">Other</option></select></div><div class="field-group"><label class="field-label" for="editPriority">Urgency</label><select id="editPriority" name="priority"><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select></div></div><label class="field-label" for="editDescription">Description</label><textarea id="editDescription" name="description" rows="4" minlength="10" maxlength="2000" required></textarea><label class="field-label" for="editLocation">Location</label><input id="editLocation" name="location" type="text" maxlength="180"><div class="dialog-actions"><button class="button button-outline" type="button" data-action="close-dialog">Cancel</button><button id="saveEdit" class="button button-primary" type="submit" data-action="save-edit">Save changes <svg class="icon"><use href="#i-arrow"/></svg></button></div></form></div>
-  </dialog>
-
-  <dialog id="deleteDialog" class="modal-dialog" aria-labelledby="deleteHeading">
-    <div class="dialog-card delete-card"><button class="dialog-close icon-button" type="button" aria-label="Close dialog" data-action="close-dialog"><svg><use href="#i-close"/></svg></button><span class="delete-symbol"><svg><use href="#i-close"/></svg></span><p class="eyebrow">REMOVE REPORT</p><h2 id="deleteHeading">Delete this <em>report?</em></h2><p class="dialog-copy">This will permanently remove your report. This action can’t be undone.</p><div class="dialog-actions"><button class="button button-outline" type="button" data-action="close-dialog">Keep report</button><button id="confirmDelete" class="button button-danger" type="button" data-action="confirm-delete">Delete report</button></div></div>
-  </dialog>
-
-  <aside id="civicAiPanel" class="civic-ai-panel" aria-labelledby="civicAiHeading" aria-hidden="true">
-    <header class="chat-header"><div class="ai-avatar"><svg><use href="#i-spark"/></svg></div><div><span class="panel-kicker">CIVICFIX ASSISTANT</span><h2 id="civicAiHeading">CivicAI</h2></div><button id="civicAiClose" class="icon-button" type="button" aria-label="Close CivicAI" data-action="close-civic-ai"><svg><use href="#i-close"/></svg></button></header>
-    <div id="chatMessages" class="chat-messages" aria-live="polite" aria-relevant="additions">
-      <div class="chat-welcome"><span class="chat-time">CIVICAI / READY</span><p>Hi! I’m CivicAI. I can help you report community issues and find practical ways to improve your neighborhood.</p></div>
-    </div>
-    <div class="quick-prompts" aria-label="Suggested questions"><span>TRY ASKING</span><button type="button" data-prompt="How do I report a pothole?">How do I report a pothole?</button><button type="button" data-prompt="Which category should I choose?">Which category should I choose?</button><button type="button" data-prompt="How can I organize a cleanup?">How can I organize a cleanup?</button></div>
-    <form id="chatForm" class="chat-form"><label class="visually-hidden" for="chatInput">Ask CivicAI</label><textarea id="chatInput" name="message" rows="1" maxlength="1000" placeholder="Ask CivicAI a question…" required></textarea><button type="submit" class="chat-send" aria-label="Send message"><svg><use href="#i-arrow"/></svg></button></form>
-    <button id="clearChat" type="button" class="clear-chat" data-action="clear-chat">Clear conversation</button>
-  </aside>
-  <button id="civicAiToggle" class="civic-ai-toggle" type="button" aria-label="Open CivicAI assistant" aria-controls="civicAiPanel" aria-expanded="false" data-action="toggle-civic-ai"><span class="ai-toggle-icon"><svg><use href="#i-spark"/></svg></span><span>Ask CivicAI</span></button>
-
-  <section id="successOverlay" class="success-overlay" role="dialog" aria-modal="true" aria-labelledby="successTitle" aria-describedby="successMessage" hidden>
-    <div class="success-card"><span class="success-stamp"><svg><use href="#i-mark"/></svg></span><p class="eyebrow">A GOOD FIRST STEP</p><h2 id="successTitle">Your report is <em>in.</em></h2><p id="successMessage">Thanks for adding a useful detail to the community picture.</p><div id="successContribution" class="success-contribution"></div><button type="button" class="button button-primary button-large" data-action="close-success">Back to your civic desk <svg class="icon"><use href="#i-arrow"/></svg></button></div>
-  </section>
-  <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
-  <script type="module" src="./supabase-config.js"></script>
-  <script type="module" src="./app.js"></script>
+  <footer class="site-footer">
+    <a class="brand" href="#top" aria-label="CivicFix home"><span class="brand-mark"><svg><use href="#i-mark"/></svg></span><span class="brand-name">civic<span>fix</span></span></a>
+    <p>See it. Understand it. Improve your community.</p>
+    <span class="footer-note">Information-only preview</span>
+  </footer>
 </body>
 </html>

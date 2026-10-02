@@ -1,0 +1,1 @@
+- [CivicFix scope](civicfix-scope.md) — Keep CivicFix informational and frontend-only; backend features need an explicit scope change.
