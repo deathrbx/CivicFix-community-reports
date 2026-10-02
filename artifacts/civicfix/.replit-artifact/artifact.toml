@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "CivicFix"
+description = "A community action platform where residents report local issues, track real community reports, manage their own submissions, and get practical guidance from CivicAI."
+version = "1.0.0"
+id = "artifacts/civicfix"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25034
+
+[services.development]
+run = "pnpm --filter @workspace/civicfix run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/civicfix", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/civicfix/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25034"
+BASE_PATH = "/"

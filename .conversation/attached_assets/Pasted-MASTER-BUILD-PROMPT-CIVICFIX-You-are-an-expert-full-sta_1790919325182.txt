@@ -1,0 +1,1498 @@
+MASTER BUILD PROMPT — CIVICFIX
+
+You are an expert full-stack developer, UI/UX designer, Supabase/PostgreSQL engineer, AI integration specialist, security engineer, and rapid vibe-coding specialist.
+
+You are building a competition website for me in one focused session.
+
+I have exactly 2 hours and 30 minutes.
+
+I am a complete beginner, so make sensible technical decisions, keep the architecture understandable, and give me complete working code. Do not make me solve technical gaps myself.
+
+The project must feel like a real startup product that could genuinely launch, not a tutorial, mockup, fake demo, or unfinished prototype.
+
+1. ROLE + CONTEXT
+
+Competition theme:
+
+Community Development & Social Life
+
+Product:
+
+CivicFix
+
+Tagline:
+
+See it. Report it. Improve your community.
+
+CivicFix is a community-development platform where residents can report local problems such as garbage, potholes, broken streetlights, water problems, damaged public facilities, and environmental issues.
+
+Residents can view community reports, track their status, and manage the reports they personally created. The platform also includes CivicAI, an AI assistant that explains how to report community issues and suggests practical actions communities can take.
+
+The core product idea is:
+
+Give ordinary residents a simple way to turn a problem they notice into a documented community action.
+
+This is for a competitive vibe-coding competition with 20+ participants. The website must be impressive during a live 2–3 minute demonstration while remaining technically realistic to build within the 2.5-hour limit.
+
+I am a beginner.
+
+Therefore:
+
+Build less. Polish more. Make everything that exists actually work.
+
+Design inspiration:
+
+Linear × Stripe × modern civic technology
+
+Do NOT copy those products. Create an original visual identity.
+
+2. PRIMARY GOAL
+
+Build a complete application with:
+
+Premium visual identity
++
+Real Supabase/PostgreSQL database
++
+Real authentication
++
+Real CRUD
++
+Real AI chatbot
++
+Responsive design
++
+Excellent UX
++
+One memorable WOW moment
+
+The most important principle is:
+
+REAL functionality over fake functionality.
+
+NEVER:
+
+Hardcode database statistics.
+Fake authentication.
+Fake database operations.
+Fake AI responses.
+Use localStorage as a database.
+Pretend sample data is real.
+Claim that a feature works when it does not.
+Leave buttons that do nothing.
+
+If the database contains no data, show a beautiful empty state instead of invented numbers.
+
+If an optional feature cannot be completed reliably within the time limit, remove it.
+
+3. TECHNOLOGY — STRICT
+Frontend
+
+MUST use only:
+
+HTML5
+CSS3
+Vanilla JavaScript ES6+
+
+DO NOT use:
+
+React
+Vue
+Angular
+Next.js
+Svelte
+TypeScript on the frontend
+Node.js
+Express
+Bootstrap
+Tailwind CSS
+jQuery
+Frontend frameworks
+
+CDN libraries are allowed only when genuinely necessary.
+
+Use inline SVG or a lightweight icon library such as Lucide if needed.
+
+The frontend must remain understandable to a beginner.
+
+Backend
+
+Use:
+
+Supabase
+PostgreSQL
+Supabase Auth
+Supabase Edge Functions where server-side functionality is required
+
+Use Supabase Storage only if genuinely necessary.
+
+Use Supabase Realtime only if it genuinely improves the application and does not introduce unnecessary complexity.
+
+The database must be real.
+
+Authentication must be real.
+
+CRUD must be real.
+
+Refreshing the browser must NOT delete application data.
+
+4. CORE USER JOURNEY
+
+The application must support this exact primary journey:
+
+LANDING PAGE
+
+↓
+
+EXPLORE CIVICFIX
+
+↓
+
+SIGN UP / LOGIN
+
+↓
+
+COMMUNITY DASHBOARD
+
+↓
+
+REPORT AN ISSUE
+
+↓
+
+REAL SUPABASE DATABASE INSERT
+
+↓
+
+REPORT APPEARS IN COMMUNITY FEED
+
+↓
+
+VIEW / EDIT / DELETE MY OWN REPORT
+
+↓
+
+REFRESH PAGE
+
+↓
+
+DATA STILL EXISTS
+
+↓
+
+OPEN CIVICAI
+
+↓
+
+ASK A PRODUCT-SPECIFIC QUESTION
+
+The entire journey should work during a live demonstration.
+
+5. SCOPE — KEEP IT SMALL
+
+Build only these major features:
+
+Premium landing page
+Supabase email/password authentication
+Community dashboard
+Real database statistics
+Report Issue form
+Community feed
+My Reports
+Edit and delete own reports
+Real CivicAI assistant
+Report-success WOW animation
+Responsive mobile design
+Professional loading, empty, error, and success states
+
+DO NOT BUILD:
+
+Admin dashboards
+Payment systems
+Messaging
+Social-media profiles
+Friend systems
+Complex gamification
+Government API integrations
+Complex GIS/map systems
+Push notifications
+Multi-language support
+Complicated role-management systems
+Unnecessary analytics infrastructure
+
+Do not add features simply to make the application appear larger.
+
+A smaller polished application is better than a large broken one.
+
+6. LANDING PAGE
+
+Create a premium startup landing page.
+
+Hero headline
+
+Make your community better, one report at a time.
+
+Supporting text
+
+CivicFix connects residents with the problems that matter — helping communities report, track, and improve local issues together.
+
+Primary CTA:
+
+Report an Issue
+
+Secondary CTA:
+
+Explore Community
+
+The hero should visually communicate:
+
+Notice → Report → Track → Improve
+
+Create a custom visual using UI elements, abstract community/location indicators, report cards, status indicators, or subtle animated interface elements.
+
+Do not use generic stock photography unless absolutely necessary.
+
+The landing page should include:
+
+Benefits
+
+Explain three simple benefits:
+
+Report problems — Turn local problems into documented reports.
+Track progress — See community issues and their current status.
+Take action — Get practical ideas through CivicAI.
+Trust section
+
+Use only legitimate product claims.
+
+Do not invent:
+
+User counts
+Government partnerships
+Organizations
+Testimonials
+Awards
+Cities served
+Impact numbers
+
+Do not create fake social proof.
+
+Final CTA
+
+Start improving your community
+
+Button:
+
+Report an Issue
+
+Footer
+
+Keep it minimal.
+
+Show:
+
+CivicFix
+
+See it. Report it. Improve your community.
+
+Do not add fake company information.
+
+7. AUTHENTICATION
+
+Use Supabase Auth with email/password.
+
+Implement:
+
+Sign up
+Login
+Logout
+Session detection
+Protected authenticated areas
+Proper auth state handling
+
+Validation/error messages should be human-readable.
+
+Examples:
+
+Invalid email
+
+“Please enter a valid email address.”
+
+Short password
+
+“Your password must be at least 6 characters.”
+
+Account exists
+
+“An account with this email already exists. Try logging in.”
+
+Wrong password
+
+“The email or password is incorrect.”
+
+Successful signup
+
+“Account created successfully.”
+
+Successful login
+
+“Welcome back.”
+
+Never store passwords yourself.
+
+Never implement custom password storage.
+
+After login, take the user to the dashboard or back to the report workflow if they originally attempted to report an issue.
+
+Logout must actually terminate the Supabase session.
+
+8. DASHBOARD
+
+The authenticated dashboard should feel like a premium SaaS application.
+
+Navigation should contain:
+
+Dashboard
+Community
+My Reports
+CivicAI
+
+Right side:
+
+User information
+Logout
+
+The dashboard must contain four REAL statistics calculated from PostgreSQL:
+
+Total reports
+Open reports
+In progress
+Resolved
+
+Define “open” consistently. For example, reports with status reported can be counted as open.
+
+NEVER hardcode these numbers.
+
+If there are zero reports, show:
+
+0
+
+because that is a real database value.
+
+Add a Community Impact section using only data that can actually be calculated.
+
+For example:
+
+Total reports
+Distinct contributors
+Resolved reports
+
+Only display values backed by real database queries.
+
+9. REPORT ISSUE FORM
+
+This is the most important product feature.
+
+Create a polished report form.
+
+Fields:
+
+Issue title
+
+Placeholder:
+
+Broken streetlight near community park
+
+Required.
+
+Category
+
+Exact options:
+
+Waste
+Roads
+Streetlights
+Water
+Public Safety
+Public Facilities
+Environment
+Other
+Description
+
+Required textarea.
+
+Placeholder:
+
+Describe what is happening and why it matters.
+
+Location
+
+Text field.
+
+Placeholder:
+
+Near Ward 10 community park
+
+Do not build a complicated map.
+
+A simple location text field is enough.
+
+Only add a map if it is trivial and reliable.
+
+Priority
+
+Options:
+
+Low
+Medium
+High
+
+Default:
+
+Medium
+
+Submit button
+
+Report Issue
+
+Submission flow MUST be:
+
+Validate the form.
+Disable the submit button while submitting.
+Insert the report into Supabase.
+Show the WOW animation.
+Show a success toast.
+Clear the form.
+Refresh relevant database data.
+Make the new report appear in the feed.
+Update dashboard statistics.
+
+If submission fails, show a useful error and allow the user to retry.
+
+10. DATABASE SCHEMA
+
+Create a PostgreSQL table named:
+
+reports
+
+Use:
+
+id uuid primary key default gen_random_uuid(),
+
+user_id uuid not null references auth.users(id) on delete cascade,
+
+title text not null,
+
+description text not null,
+
+category text not null,
+
+location text,
+
+priority text not null default 'medium',
+
+status text not null default 'reported',
+
+created_at timestamptz not null default now(),
+
+updated_at timestamptz not null default now()
+
+Add CHECK constraints.
+
+Allowed categories:
+
+waste
+roads
+streetlights
+water
+safety
+facilities
+environment
+other
+
+Allowed priorities:
+
+low
+medium
+high
+
+Allowed statuses:
+
+reported
+in_progress
+resolved
+
+Use sensible indexes, especially for:
+
+user_id
+status
+created_at
+
+Create an updated_at trigger so updates automatically change updated_at.
+
+Do not introduce unnecessary tables.
+
+An optional profiles table may be created ONLY if genuinely needed to display reporter information.
+
+If you create it, explain why and configure it correctly with a signup trigger.
+
+11. ROW LEVEL SECURITY
+
+Enable Row Level Security on all user data.
+
+NEVER disable RLS to fix an error.
+
+Users should be able to:
+
+SELECT
+
+Authenticated users can view community reports.
+
+INSERT
+
+Authenticated users can create reports.
+
+The inserted user_id must correspond to:
+
+auth.uid()
+
+Do not trust a user ID supplied by the browser.
+
+UPDATE
+
+Users may update only reports where:
+
+reports.user_id = auth.uid()
+
+DELETE
+
+Users may delete only reports where:
+
+reports.user_id = auth.uid()
+
+Use PostgreSQL RLS policies.
+
+Do not implement security only in JavaScript.
+
+The database itself must enforce ownership.
+
+12. COMMUNITY FEED + MY REPORTS
+
+Create a polished community feed using real Supabase data.
+
+Each report card should display:
+
+Category
+Title
+Description preview
+Location
+Priority
+Status
+Relative time
+Appropriate ownership controls where applicable
+
+Example format:
+
+STREETLIGHT
+
+Broken streetlight near community park
+
+Near Ward 10 community park
+
+MEDIUM
+
+Reported
+
+2 hours ago
+
+The exact example is UI copy only. Do not hardcode fake reports into the production interface.
+
+Use consistent status styling:
+
+Reported → warning
+In Progress → primary
+Resolved → success
+
+Use subtle badges instead of excessive colors.
+
+Add relative timestamps such as:
+
+Just now
+5 minutes ago
+2 hours ago
+Yesterday
+
+Use real timestamps from PostgreSQL.
+
+My Reports
+
+Show only the authenticated user's reports.
+
+Allow:
+
+View
+Edit
+Delete
+
+Editing should use a polished modal or inline editing interface.
+
+Delete must require confirmation.
+
+Example:
+
+Delete this report?
+
+“This action cannot be undone.”
+
+Buttons:
+
+Cancel
+
+Delete Report
+
+After update/delete:
+
+Update the UI immediately.
+Refresh relevant data if necessary.
+Show a toast.
+
+A simple search/filter can be added only if it is easy and reliable.
+
+13. CIVICAI — REAL AI ASSISTANT
+
+Create a real AI assistant named:
+
+CivicAI
+
+CivicAI's personality:
+
+Helpful
+Concise
+Practical
+Community-focused
+Friendly
+Honest
+Never overconfident
+
+CivicAI should help users understand CivicFix and practical community action.
+
+It should handle questions such as:
+
+“How do I report a pothole?”
+“Which category should garbage dumping use?”
+“How can our neighborhood organize a cleanup?”
+“What information should I include in a report?”
+“How can communities reduce litter?”
+“What should I do about a broken streetlight?”
+
+CivicAI MUST NOT:
+
+Claim it contacted officials.
+Claim it resolved a report.
+Claim it submitted a report unless the application actually did so.
+Invent community statistics.
+Invent reports.
+Invent government policies.
+Pretend it performed an action it did not perform.
+Generate arbitrary SQL.
+Access another user's private reports.
+State uncertain information as fact.
+
+If it does not know something, it should say so.
+
+AI architecture
+
+Use:
+
+Browser
+
+↓
+
+Supabase Edge Function
+
+supabase/functions/civic-ai/index.ts
+
+↓
+
+AI provider
+
+↓
+
+Edge Function
+
+↓
+
+Browser
+
+The AI secret key MUST exist only in Edge Function secrets.
+
+NEVER expose the AI secret key in:
+
+HTML
+CSS
+JavaScript
+Git repository
+Browser network configuration
+
+The Edge Function must:
+
+Handle CORS.
+Verify the Supabase JWT/session.
+Validate the request.
+Cap message length.
+Cap conversation history.
+Return useful HTTP errors.
+Avoid exposing secrets.
+Return clean JSON.
+
+Use a concise system prompt defining CivicAI's role and safety boundaries.
+
+If page-aware context is implemented, keep it controlled.
+
+For example, the application may provide the AI with information about the authenticated user's reports.
+
+If the user asks:
+
+“What are my reports?”
+
+The application may query the database using the authenticated session and provide the resulting controlled data to the AI.
+
+NEVER allow the AI to generate arbitrary SQL.
+
+14. AI CONFIGURATION FAILURE
+
+If an AI provider is not configured, DO NOT fake AI.
+
+Instead show an honest message such as:
+
+CivicAI isn't configured yet. Add your AI provider secret to the Supabase Edge Function to enable the assistant.
+
+The rest of CivicFix must continue working even if CivicAI is unavailable.
+
+If AI fails during a demo, the application must not crash.
+
+Show:
+
+I'm having trouble connecting right now. Please try again.
+
+15. CIVICAI CHAT UI
+
+Create a floating button in the bottom-right corner:
+
+CivicAI
+
+When opened, show a premium chat panel.
+
+Header:
+
+CivicAI
+
+Supporting text:
+
+Your community action assistant
+
+Welcome message:
+
+Hi! I'm CivicAI. I can help you report community issues and find practical ways to improve your neighborhood.
+
+Include three quick prompt chips:
+
+How do I report a pothole?
+
+Which category should I choose?
+
+How can I organize a cleanup?
+
+Chat must support:
+
+User messages
+AI messages
+Loading state
+Error state
+Auto-scroll
+Enter to send
+Send button
+Clear conversation
+Close button
+Duplicate-submit prevention
+
+Conversation memory should be session-only.
+
+Do not store private conversations in the database unless genuinely necessary.
+
+On mobile, the chat should become a full-screen or near-full-screen bottom sheet that fits the viewport.
+
+16. WOW MOMENT
+
+Create one memorable interaction immediately after successful report submission.
+
+The animation should last approximately 1–2 seconds.
+
+Display:
+
+✓
+
+REPORT RECEIVED
+
+Your community just became a little better.
+
++1 community contribution
+
+Then animate the newly created report card smoothly into the community feed.
+
+Use:
+
+Checkmark animation
+Subtle glow
+Smooth scale/fade
+Card entrance animation
+
+DO NOT use:
+
+Confetti
+Excessive particle effects
+Loud animations
+Cartoon effects
+
+The feeling should be:
+
+“I actually contributed something.”
+
+This is the main memorable competition moment.
+
+17. VISUAL IDENTITY — FUTURE TRUST
+
+Visual identity:
+
+FUTURE TRUST
+
+The product should feel like:
+
+Premium SaaS + intelligent AI + modern civic technology
+
+It should communicate:
+
+Trust
+Intelligence
+Innovation
+Technology
+Speed
+Professionalism
+
+Use a dark-first interface.
+
+Start with:
+
+:root {
+    --bg: #080b12;
+    --surface: #10151f;
+    --surface-2: #151c28;
+    --surface-3: #1b2330;
+
+    --text: #f5f7fa;
+    --muted: #8f9aaa;
+
+    --border: rgba(255,255,255,0.08);
+
+    --primary: #7c5cff;
+    --secondary: #22d3ee;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+}
+
+You may refine the exact colors but preserve the design direction.
+
+Use CSS variables throughout.
+
+Do not randomly introduce colors.
+
+Use
+Large confident typography
+Strong spacing
+Premium cards
+Thin borders
+Subtle gradients
+Controlled glow
+Soft shadows
+Elegant hover states
+Smooth micro-interactions
+Clean icons
+Modern data presentation
+Avoid
+Excessive neon
+Rainbow gradients
+Excessive glassmorphism
+Cartoon styling
+Generic Bootstrap appearance
+Excessive animation
+Huge 3D effects
+Random emoji as primary UI icons
+
+The tone must be:
+
+Premium. Restrained. Modern. Intelligent.
+
+Use one consistent icon system, preferably inline SVG or Lucide.
+
+18. RESPONSIVE DESIGN
+
+The application MUST work at:
+
+375px
+768px
+1024px
+1440px
+
+On mobile:
+
+Navigation collapses appropriately.
+Cards become one column.
+Report form becomes one column.
+Chat fits the viewport.
+Buttons have large enough touch targets.
+No horizontal scrolling exists.
+Modals fit the screen.
+Text does not overflow.
+
+Do not simply shrink the desktop interface.
+
+Create intentional responsive layouts.
+
+19. UX STATES
+
+Every asynchronous operation needs feedback.
+
+Implement:
+
+Loading
+
+Use appropriate:
+
+Skeletons
+Spinners
+Button loading states
+
+Do not leave blank screens.
+
+Toast examples
+
+✓ Issue reported successfully
+
+✓ Report updated
+
+✓ Report deleted
+
+✕ Something went wrong
+
+Empty community feed
+
+Use:
+
+No community reports yet.
+
+Be the first person to report an issue in your community.
+
+Button:
+
+Report an Issue
+
+Empty My Reports
+
+Use:
+
+You haven't reported anything yet.
+
+Button:
+
+Report an Issue
+
+Error
+
+Use human language:
+
+We couldn't load community reports. Please try again.
+
+Button:
+
+Retry
+
+Do not show unexplained errors such as:
+
+Error 500
+
+Add subtle polish:
+
+Page entrance animation
+Card hover elevation
+Button press states
+Modal transitions
+Toast animation
+Smooth status updates
+
+Keep animations fast and professional.
+
+20. ACCESSIBILITY
+
+Use:
+
+Semantic HTML
+Proper labels
+Keyboard navigation
+Visible focus states
+Strong contrast
+aria-label where needed
+Real <button> elements
+Proper form labels
+Meaningful error messages
+
+Do not make clickable <div> elements when a button should be used.
+
+21. SECURITY
+
+NEVER expose:
+
+Supabase service-role key
+Database password
+Private AI API key
+
+The browser may contain only the Supabase URL and public anon key.
+
+RLS MUST remain enabled.
+
+Use:
+
+auth.uid()
+
+for ownership policies.
+
+Never trust a browser-supplied user_id.
+
+Validate all user inputs.
+
+When displaying user-generated content, safely escape content before inserting it into HTML to prevent XSS.
+
+Do not use unsafe innerHTML with untrusted user content unless properly escaped.
+
+Use secure Edge Function authentication.
+
+Do not store passwords.
+
+Do not create fake authentication.
+
+22. PROJECT STRUCTURE
+
+Keep the project simple:
+
+civicfix/
+│
+├── index.html
+├── styles.css
+├── app.js
+│
+├── supabase/
+│   ├── schema.sql
+│   └── functions/
+│       └── civic-ai/
+│           └── index.ts
+│
+└── README.md
+
+You may split JavaScript into a few small modules if that genuinely improves clarity, but do not create unnecessary complexity.
+
+Use functions such as:
+
+initializeApp()
+initializeAuth()
+loadReports()
+loadMyReports()
+createReport()
+updateReport()
+deleteReport()
+renderReports()
+renderStats()
+openReportModal()
+openAIChat()
+sendAIMessage()
+showToast()
+
+Use async/await.
+
+Handle errors.
+
+Do not leave TODOs for core functionality.
+
+23. SUPABASE SETUP
+
+Provide beginner-friendly setup instructions.
+
+Use configuration placeholders:
+
+const SUPABASE_URL = "YOUR_SUPABASE_URL";
+const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+
+Explain exactly where these values come from.
+
+Setup sequence:
+
+Create a Supabase project.
+Open Supabase SQL Editor.
+Run supabase/schema.sql.
+Configure Supabase Auth.
+For competition testing, explain how to turn off email confirmation if appropriate for the project's test environment.
+Copy the Supabase project URL.
+Copy the public anon key.
+Paste them into the frontend configuration.
+Test signup.
+Test login.
+Test report creation.
+Test refresh persistence.
+
+Do not expose any service-role key.
+
+24. EDGE FUNCTION DEPLOYMENT
+
+Provide beginner-friendly steps for CivicAI.
+
+Include:
+
+Install Supabase CLI.
+Log in.
+Link the Supabase project.
+Set the AI provider secret.
+Deploy the Edge Function.
+
+Use the appropriate commands and clearly identify where each command should be run.
+
+The secret must be configured through Supabase secrets.
+
+Do not put it in the frontend.
+
+If an AI provider requires an API key, use a placeholder in the setup instructions rather than inventing a real key.
+
+25. DEMO DATA
+
+The application MUST work with an empty database.
+
+Provide an OPTIONAL SQL seed script with a few fictional sample reports.
+
+Clearly label the seed data as:
+
+DEMO DATA
+
+Do not make fictional data appear to be real community statistics.
+
+If the seed requires a user ID, explain how to obtain the authenticated user's UUID after signup and how to safely associate sample reports with that user.
+
+Do not fabricate user counts, impact numbers, partners, testimonials, government relationships, or community achievements.
+
+26. LIVE COMPETITION DEMO
+
+Design the application around this 2–3 minute demo.
+
+Step 1 — Landing
+
+Show:
+
+Make your community better, one report at a time.
+
+Step 2 — Login
+
+Authenticate with a competition test account.
+
+Step 3 — Dashboard
+
+Show the real database statistics.
+
+Step 4 — Report issue
+
+Create this report:
+
+Title:
+
+Broken streetlight near community park
+
+Category:
+
+Streetlights
+
+Description:
+
+The streetlight near the community park has stopped working and the area becomes difficult to see after dark.
+
+Location:
+
+Near Ward 10 community park
+
+Priority:
+
+Medium
+
+Step 5 — Submit
+
+Show the WOW moment:
+
+REPORT RECEIVED
+
+Your community just became a little better.
+
+Step 6
+
+Show the new report appearing in the community feed.
+
+Step 7
+
+Open My Reports.
+
+Show that the authenticated user owns the report.
+
+Step 8
+
+Refresh the browser.
+
+Show that the report still exists.
+
+This proves real persistence.
+
+Step 9
+
+Open CivicAI.
+
+Ask exactly:
+
+How can our neighborhood reduce litter?
+
+Show the real AI response.
+
+The demo should clearly demonstrate:
+
+Authentication + PostgreSQL + CRUD + Persistence + AI + Premium UX
+
+27. PRIORITY ORDER + TIME PLAN
+
+I have exactly 2 hours and 30 minutes.
+
+Use this priority order:
+
+Priority 1 — Authentication
+
+Make signup/login/session/logout work.
+
+Priority 2 — Report CRUD
+
+Make insert, select, update, and delete work.
+
+Priority 3 — UI polish
+
+Make the interface look premium.
+
+Priority 4 — Dashboard
+
+Add real statistics and community feed.
+
+Priority 5 — CivicAI
+
+Implement the Edge Function and chat.
+
+Priority 6 — WOW animation
+
+Polish the report-success moment.
+
+Suggested time allocation:
+
+0:00–0:25
+
+Supabase project, SQL schema, RLS, Auth
+
+0:25–1:00
+
+Report CRUD and persistence
+
+1:00–1:35
+
+Premium UI, dashboard, community feed, My Reports
+
+1:35–2:00
+
+CivicAI Edge Function and chat
+
+2:00–2:15
+
+WOW animation and UX states
+
+2:15–2:30
+
+Full testing and fixing
+
+If anything becomes technically risky:
+
+SIMPLIFY IT.
+
+Do not allow an optional feature to break authentication, database CRUD, or the demo.
+
+28. DELIVERY PROTOCOL FOR A BEGINNER
+
+Do not dump incomplete code.
+
+For EVERY file you create, provide:
+
+Exact filename
+Exact folder
+Complete code
+Where I should paste it
+What the file does
+What I should see after running it
+
+NEVER write:
+
+// rest of code here
+
+NEVER write:
+
+// TODO: implement this
+
+for a core feature.
+
+NEVER omit important code.
+
+The project must be buildable from your output.
+
+Deliver in logical stages so I can test each stage before continuing.
+
+Start with:
+
+Stage 1 — Supabase setup and SQL
+
+Then:
+
+Stage 2 — HTML/CSS foundation
+
+Then:
+
+Stage 3 — Authentication
+
+Then:
+
+Stage 4 — Report CRUD
+
+Then:
+
+Stage 5 — Dashboard/feed/My Reports
+
+Then:
+
+Stage 6 — CivicAI
+
+Then:
+
+Stage 7 — WOW moment and final polish
+
+If the environment allows you to directly create/edit files, do so instead of making me manually copy large blocks.
+
+29. FINAL QUALITY CHECKLIST
+
+Before declaring the project complete, verify that the answer to every relevant question is YES.
+
+Authentication
+Can a new user sign up?
+Can a user log in?
+Can a user log out?
+Does session detection work?
+Are protected areas actually protected?
+Database
+Does a report insert into PostgreSQL?
+Does it appear after insertion?
+Does it survive refresh?
+Can the owner edit it?
+Can the owner delete it?
+Are dashboard statistics calculated from real rows?
+RLS
+Is RLS enabled?
+Can authenticated users read community reports?
+Can users insert their own reports?
+Can users update only their own reports?
+Can users delete only their own reports?
+Are policies based on auth.uid()?
+Security
+Is the service-role key absent from frontend code?
+Is the AI secret absent from frontend code?
+Are user inputs validated?
+Is user-generated content safely rendered?
+Are JWT/session checks used correctly?
+AI
+Does CivicAI actually call an AI backend?
+Is the AI secret stored server-side?
+Does the Edge Function validate authentication?
+Does it handle errors?
+Does it avoid fake responses?
+Does the application remain usable if AI is unavailable?
+UX
+Are loading states present?
+Are empty states present?
+Are error states understandable?
+Are success toasts present?
+Does the WOW animation work?
+Does the new report animate into the feed?
+Responsive
+Does it work at 375px?
+Does it work at 768px?
+Does it work at 1024px?
+Does it work at 1440px?
+Is there no horizontal scrolling?
+Demo
+Can the full flow be demonstrated in 2–3 minutes?
+Is the primary value obvious immediately?
+Does the application look like a real product?
+Does every visible button actually work?
+
+Do not declare completion until these checks have been considered.
+
+30. FINAL PRODUCT FEEL
+
+The final application should feel like a startup that could genuinely launch.
+
+It should not feel like:
+
+A school project
+A CRUD tutorial
+A generic AI dashboard
+A Bootstrap template
+A fake prototype
+A collection of disconnected pages
+
+It should feel like a focused civic technology product.
+
+The central emotional message is:
+
+“My community has problems, but now I have a simple way to do something about them.”
+
+Every design and engineering decision should support that idea.
+
+The judges should understand the product within seconds.
+
+They should be able to see:
+
+Problem → Action → Database → Impact
+
+without needing a long explanation.
+
+Make the interface memorable but restrained.
+
+Make the technology real.
+
+Make the demo reliable.
+
+Do not invent facts about the product, users, organizations, partners, statistics, or impact.
+
+Do not ask unnecessary questions.
+
+When something is unspecified, make the simplest sensible engineering decision.
+
+If something is too complex for the time limit, simplify it.
+
+Build less. Polish more. Make it real
