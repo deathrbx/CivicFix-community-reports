@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: civicai
+    description: CivicAI conversation operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,33 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /civicai/chat:
+    post:
+      operationId: chatWithCivicAI
+      tags: [civicai]
+      summary: Get civic guidance from CivicAI
+      description: Sends a non-persistent conversation to the configured AI provider.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CivicAIChatInput"
+      responses:
+        "200":
+          description: CivicAI response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CivicAIChatResponse"
+        "400":
+          description: Invalid conversation
+        "429":
+          description: Rate limit reached
+        "502":
+          description: AI provider request failed
+        "503":
+          description: AI provider is not configured
 components:
   schemas:
     HealthStatus:
@@ -33,4 +62,35 @@ components:
           type: string
       required:
         - status
+    CivicAIMessage:
+      type: object
+      properties:
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+          minLength: 1
+          maxLength: 2000
+      required:
+        - role
+        - content
+    CivicAIChatInput:
+      type: object
+      properties:
+        messages:
+          type: array
+          minItems: 1
+          maxItems: 12
+          items:
+            $ref: "#/components/schemas/CivicAIMessage"
+      required:
+        - messages
+    CivicAIChatResponse:
+      type: object
+      properties:
+        answer:
+          type: string
+      required:
+        - answer
 

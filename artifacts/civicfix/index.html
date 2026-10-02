@@ -30,12 +30,13 @@
     <nav class="landing-nav" aria-label="Main navigation">
       <a href="#how-it-works">The approach</a>
       <a href="#community">Principles</a>
+      <a href="#civicai">CivicAI</a>
     </nav>
     <a class="button button-primary button-small header-cta" href="#how-it-works">Explore the approach <svg class="icon"><use href="#i-arrow"/></svg></a>
   </header>
 
   <main id="top">
-    <p class="preview-notice" role="status">Information-only preview. Accounts, live reports, and AI assistance are not enabled.</p>
+    <p class="preview-notice" role="status">CivicAI source is ready for provider setup. Accounts and report submission or storage remain disabled.</p>
 
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
@@ -130,6 +131,37 @@
       </div>
     </section>
 
+    <section class="civicai-section" id="civicai" aria-labelledby="civicai-title">
+      <div class="civicai-intro">
+        <div class="section-kicker">GENERAL CIVIC GUIDANCE <span>— 04</span></div>
+        <h2 id="civicai-title">Ask <em>CivicAI.</em></h2>
+        <p>Get practical suggestions for understanding a local issue and finding a useful next step. CivicAI is not a government service and does not submit or save reports.</p>
+        <p class="civicai-privacy">Messages are sent to the configured AI provider for a response and are not stored by CivicFix. Avoid names and exact addresses; verify advice with official local sources.</p>
+      </div>
+      <div class="civicai-panel">
+        <div class="civicai-panel-head">
+          <span class="civicai-avatar" aria-hidden="true">C</span>
+          <div><strong>CivicAI</strong><span>Community information guide</span></div>
+          <span class="civicai-online"><span class="status-dot"></span> PROVIDER SETUP</span>
+        </div>
+        <div class="civicai-messages" id="civicai-messages" aria-live="polite" aria-relevant="additions text">
+          <article class="civicai-message civicai-message-assistant">
+            <span class="civicai-message-label">CIVICAI</span>
+            <p>Hi. I can help think through a local concern and suggest general next steps. What would you like to understand?</p>
+          </article>
+        </div>
+        <p class="civicai-status" id="civicai-status" role="status">The server needs a provider endpoint, model, and rotated API key before CivicAI can answer.</p>
+        <form class="civicai-form" id="civicai-form">
+          <label class="visually-hidden" for="civicai-input">Ask CivicAI a question</label>
+          <textarea id="civicai-input" name="message" maxlength="2000" rows="2" placeholder="Describe a local concern or ask where to start…" required></textarea>
+          <button class="button button-primary civicai-send" id="civicai-send" type="submit" aria-label="Send message to CivicAI">
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </button>
+          <span class="civicai-hint">Enter to send · Shift+Enter for a new line</span>
+        </form>
+      </div>
+    </section>
+
     <section class="closing-cta">
       <span class="closing-index">CIVICFIX / A COMMUNITY CONCEPT</span>
       <h2>Know your block.<br><em>Help it work better.</em></h2>
@@ -144,5 +176,6 @@
     <p>See it. Understand it. Improve your community.</p>
     <span class="footer-note">Information-only preview</span>
   </footer>
+  <script type="module" src="./src/civicai.ts"></script>
 </body>
 </html>
